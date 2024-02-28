@@ -256,7 +256,7 @@ header {
 }
 
 .login-register p a {
-  color: var(--text);
+  color: #adb4b6;
   text-decoration: none;
   font-weight: 600;
 }
@@ -264,4 +264,3 @@ header {
 .login-register p a:hover {
   text-decoration: underline;
 }
-
