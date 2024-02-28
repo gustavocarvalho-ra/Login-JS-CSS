@@ -96,6 +96,11 @@ header {
   justify-content: center;
   align-items: center;
   /* overflow: hidden; */
+  transition: height .2s ease;
+}
+
+.wrapper.active {
+  height: 520px;
 }
 
 .wrapper .form-box {
@@ -104,7 +109,18 @@ header {
 }
 
 .wrapper .form-box.login {
-  display: none;
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transform: translateX(400px);
 }
 
 .wrapper .icon-close {
