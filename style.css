@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
+:root {
+  --text: #5294a1;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -95,8 +99,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
-  transition: height .2s ease;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup {
+  transform: scale(1);
 }
 
 .wrapper.active {
@@ -120,7 +129,13 @@ header {
 
 .wrapper .form-box.register {
   position: absolute;
+  transition: none;
   transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform .18s ease;
+  transform: translateX(0);
 }
 
 .wrapper .icon-close {
@@ -129,7 +144,7 @@ header {
   right: 0;
   width: 45px;
   height: 45px;
-  background: #162938;
+  background: var(--text);
   font-size: 2em;
   color: #fff;
   display: flex;
@@ -142,7 +157,7 @@ header {
 
 .form-box h2 {
   font-size: 2em;
-  color: #162938;
+  color: var(--text);
   text-align: center;
 }
 
@@ -150,7 +165,7 @@ header {
   position: relative;
   width: 100%;
   height: 50px;
-  border-bottom: 2px solid #162938;
+  border-bottom: 2px solid var(--text);
   margin: 30px 0;
 }
 
@@ -160,7 +175,7 @@ header {
   left: 5px;
   transform: translateY(-50%);
   font-size: 1em;
-  color: #162938;
+  color: var(--text);
   font-weight: 500;
   pointer-events: none;
   transition: .5s;
@@ -178,7 +193,7 @@ header {
   border: none;
   outline: none;
   font-size: 1em;
-  color: #162938;
+  color: var(--text);
   font-weight: 600;
   padding: 0 35px 0 5px;
 }
@@ -187,13 +202,13 @@ header {
   position: absolute;
   right: 8px;
   font-size: 1.2em;
-  color: #162938;
+  color: var(--text);
   line-height: 57px;
 }
 
 .remember-forgot {
   font-size: .9em;
-  color: #162938;
+  color: var(--text);
   font-weight: 500;
   margin: -15px 0 15px;
   display: flex;
@@ -201,12 +216,12 @@ header {
 }
 
 .remember-forgot label input {
-  accent-color: #162938;
+  accent-color: var(--text);
   margin-right: 3px;
 }
 
 .remember-forgot a {
-  color: #162938;
+  color: #adb4b6;
   text-decoration: none;
 }
 
@@ -217,7 +232,7 @@ header {
 .btn {
   width: 100%;
   height: 45px;
-  background: #162938;
+  background: var(--text);
   border: none;
   outline: none;
   border-radius: 6px;
@@ -227,16 +242,21 @@ header {
   font-weight: 500;
 }
 
+.btn:hover {
+  background: #234147;
+  transition: .5s;
+}
+
 .login-register {
   font-size: .9em;
-  color: #162938;
+  color: var(--text);
   text-align: center;
   font-weight: 500;
   margin: 25px 0 10px;
 }
 
 .login-register p a {
-  color: #162938;
+  color: var(--text);
   text-decoration: none;
   font-weight: 600;
 }
