@@ -178,4 +178,7 @@ header {
 .btn {
   width: 100%;
   height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
 }
