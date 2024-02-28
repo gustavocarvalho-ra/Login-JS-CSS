@@ -21,12 +21,16 @@
   </header>
 
   <div class="wrapper">
+    <span class="icon-close">
+      <ion-icon name="close">
+    </ion-icon></span>
+
     <div class="form-box login">
       <h2>Login</h2>
       <form action="#">
         <div class="input-box">
           <span class="icon"><ion-icon name="archive"></ion-icon></span>
-          <input type="email" required>
+          <input type="e-mail" required>
           <label>Email</label>
         </div>
         <div class="input-box">
@@ -42,6 +46,36 @@
         <div class="login-register">
           <p>Não possui conta?
             <a href="#" class="register-link">Registrar</a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-box register">
+      <h2>Registrar</h2>
+      <form action="#">
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" required>
+          <label>Nome de usuário</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="archive"></ion-icon></span>
+          <input type="e-mail" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" required>
+          <label>Senha</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox" required>Eu concordo com os termos & condições</label>
+        </div>
+        <button type="submit" class="btn">Registrar</button>
+        <div class="login-register">
+          <p>Já possui uma conta?
+            <a href="#" class="login-link">Login</a>
           </p>
         </div>
       </form>
