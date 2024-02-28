@@ -165,3 +165,12 @@ header {
   accent-color: #162938;
   margin-right: 3px;
 }
+
+.remember-forgot a {
+  color: #162938;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
