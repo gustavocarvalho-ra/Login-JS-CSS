@@ -174,3 +174,8 @@ header {
 .remember-forgot a:hover {
   text-decoration: underline;
 }
+
+.btn {
+  width: 100%;
+  height: 45px;
+}
